@@ -11,10 +11,11 @@
         <p:panel header="Login">
             <h:form>
                 <h:panelGrid columns="2">
-                    Email <p:inputText value="#{userController.user.email}"/>
-                    Senha: <p:password value="#{userController.user.password}"/>
+                    <p:outputLabel value="Email: " for="email"/> <p:inputText value="#{userController.user.email}" id="email"/>
+                    <p:outputLabel value="Senha: " for="password"/> <p:password value="#{userController.user.password}" id="password"/>
+                    <p:outputLabel value="Confirmar senha: " for="confirm_password"/> <p:password value="#{userController.user.password}" id="confirm_password"/>
                     <p:commandButton value="Enviar" action="#{userController.logar}"/>
-                    <p:link value="Criar novo cadastro" outcome="signup"/>
+                    <p:link value="Já tenho cadastro" outcome="index"/>
                 </h:panelGrid>
             </h:form>
         </p:panel>
